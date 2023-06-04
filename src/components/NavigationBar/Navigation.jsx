@@ -5,7 +5,9 @@ import Link from "next/link";
 const Navigation = () => {
   return (
     <nav className={styles.Nav}>
-      <div className={styles.Left_Nav}>~</div>
+      <div className={styles.Left_Nav}>
+        <Link href={"/"}>~</Link>
+      </div>
       <div className={styles.Right_Nav}>
         <ul className={styles.List}>
           <Link href={"/"} className={`${styles.Items} highlight`}>
