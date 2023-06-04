@@ -1,5 +1,5 @@
 .Nav {
-    margin: 1em;
+    margin: 1em 2em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,10 +18,4 @@
 
 .Right_Nav .List .Items li {
     color: #bbbbbb;
-}
-
-.active {
-    /* background-color: #ffffff1c; */
-    /* padding: 0.3em 0.5em; */
-    /* border-radius: 5px; */
 }
