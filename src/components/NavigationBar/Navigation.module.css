@@ -1,0 +1,27 @@
+.Nav {
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Left_Nav {
+    font-size: 1.5em;
+}
+
+.Right_Nav .List {
+    display: flex;
+    gap: 1.5em;
+    list-style-type: none;
+    color: #7d8493;
+}
+
+.Right_Nav .List .Items li {
+    color: #bbbbbb;
+}
+
+.active {
+    /* background-color: #ffffff1c; */
+    /* padding: 0.3em 0.5em; */
+    /* border-radius: 5px; */
+}

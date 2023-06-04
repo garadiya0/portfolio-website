@@ -1,0 +1,21 @@
+.Main {
+  margin: 0 12%;
+}
+
+.Left_Main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.Left_Main h1 {
+  font-size: 2.8em;
+}
+
+.Left_Main p {
+  font-size: 1.2em;
+}
+
+.Left_Main p:last-child {
+  font-size: 1.2em;
+}
