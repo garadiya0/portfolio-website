@@ -30,25 +30,3 @@
   line-height: 1.4;
   font-weight: 400;
 }
-
-.Socials ul {
-  margin: 2em 0;
-  display: flex;
-  gap: 1.8em;
-  list-style-type: none;
-}
-
-.Social_Twitter,
-.Social_Github,
-.Social_Insta,
-.Social_Hashnode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(83 83 83 / 16%);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  padding: 5px 7px 3px 7px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}

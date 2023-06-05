@@ -58,3 +58,23 @@ a {
   transform: scaleX(1);
   transform-origin: center left;
 }
+
+/* MUI-TOOLTIP (Overiding CSS */
+.MuiTooltip-tooltip {
+  border-radius: 5px !important;
+  padding: 0.4em 0.7em;
+  background: rgba(255, 255, 255, 0.078);
+}
+
+.MuiTooltip-arrow {
+  color: rgba(255, 255, 255, 0.078);
+
+}
+
+.MuiTooltip-tooltip,
+.MuiTooltip-arrow {
+  font-size: 0.8em;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+}
