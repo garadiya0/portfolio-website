@@ -1,0 +1,44 @@
+.Card {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 27px 0 rgb(19 10 32);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.8em 1.5em;
+    cursor: default;
+}
+
+.Card .Info {
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.Card .Info .Project_Name {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.Card .Info .Project_Desc {
+    font-size: 15px;
+    color: #bbb;
+    margin-bottom: 1em;
+}
+
+.Card .Info .Link {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    color: #bbb;
+}
+
+.Link .Github_Repo {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}

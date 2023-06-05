@@ -30,3 +30,10 @@
   line-height: 1.4;
   font-weight: 400;
 }
+
+.Project_Section {}
+
+.Project_Section h1 {
+  font-size: 1.5em;
+  margin: 2em 0;
+}
