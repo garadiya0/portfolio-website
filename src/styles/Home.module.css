@@ -40,6 +40,10 @@
   font-size: 1.5em;
 }
 
+.Project_Section .View_Project {
+  display: inline-block;
+}
+
 .Project_Section h3 {
   cursor: pointer;
   display: flex;
@@ -49,7 +53,10 @@
   font-weight: 400;
 }
 
-.Project_Section h3 .NextArrowImg {
-  animation-name: circle-3-keyframes;
-  animation-duration: 100ms;
+.Project_Section .View_Project .NextArrowImg {
+  transition: transform 0.5s ease;
+}
+
+.Project_Section .View_Project:hover .NextArrowImg {
+  transform: translate(3px, 0);
 }

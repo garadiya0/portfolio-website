@@ -78,7 +78,7 @@ export default function Home() {
             GithubRepoName="garadiya0/polyverse-illustration"
           />
 
-          <Link href={"/projects"}>
+          <Link href={"/projects"} className={styles.View_Project}>
             <h3>
               View All Project
               <Image
