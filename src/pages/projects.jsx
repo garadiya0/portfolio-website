@@ -1,8 +1,13 @@
 import React from 'react'
+import Navigation from "@/components/NavigationBar/Navigation";
+
 
 const projects = () => {
   return (
-    <div>THIS IS PROJECTS PAGE!</div>
+    <>
+      <Navigation currentPage="Projects"/>
+      <div>THIS IS PROJECT PAGE!</div>;
+    </>
   )
 }
 

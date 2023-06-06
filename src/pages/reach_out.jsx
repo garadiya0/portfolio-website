@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navigation from "@/components/NavigationBar/Navigation";
 
 const reach_out = () => {
   return (
-    <div>REACH-OUT PAGE IT IS!</div>
-  )
-}
+    <>
+      <Navigation currentPage="React Out"/>
+      <div>THIS IS REACT OUT PAGE!</div>;
+    </>
+  );
+};
 
-export default reach_out
+export default reach_out;

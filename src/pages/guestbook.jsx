@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navigation from "@/components/NavigationBar/Navigation";
 
 const guestbook = () => {
   return (
-    <div>GUESTBOOK PAGE IT IS!</div>
-  )
-}
+    <>
+      <Navigation currentPage="Guestbook" />
+      <div>THIS IS GUESTBOOK PAGE!</div>;
+    </>
+  );
+};
 
-export default guestbook
+export default guestbook;

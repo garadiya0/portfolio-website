@@ -6,10 +6,12 @@ import Footer from "@/components/Footer/Footer";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
 import SocialWidgets from "@/components/SocialWidgets/SocialWidgets";
+import Navigation from "@/components/NavigationBar/Navigation";
 
 export default function Home() {
   return (
     <>
+      <Navigation />
       <section className={styles.Page}>
         <section className={styles.Main}>
           <div className={styles.Left_Main}>

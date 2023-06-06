@@ -1,12 +1,22 @@
 .Nav {
-    margin: 1em 2em;
+    cursor: default;
+    margin: 1.5em 2em;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .Left_Nav {
-    font-size: 1.5em;
+    font-size: 1em;
+}
+
+.Left_Nav span {
+    font-size: 0.8em;
+    color: #bbb;
+}
+.current_page {
+    color: #22bb44;
+    font-weight: 500;
 }
 
 .Right_Nav .List {
@@ -18,4 +28,10 @@
 
 .Right_Nav .List .Items li {
     color: #bbbbbb;
+}
+
+/* STYLES ON NAV ITEMS WHEN THEY ARE ON THEIR SPECIFIC PAGES */
+.nav_active li{
+    padding: 1em;
+    background-color: #7d8493;
 }
