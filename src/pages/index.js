@@ -8,16 +8,6 @@ import SocialWidgets from "@/components/SocialWidgets/SocialWidgets";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Himanshu Garadiya | Developer</title>
-        <meta
-          name="description"
-          content="Personal Portfolio of Himanshu Garadiya"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <section className={styles.Page}>
         <section className={styles.Main}>
           <div className={styles.Left_Main}>
@@ -40,8 +30,9 @@ export default function Home() {
         </section>
 
         {/* TWITTER | GITHUB | INSTA | HASHNODE */}
-        <SocialWidgets />
+        <SocialWidgets center={false} />
 
+        {/* PROJECTS SECTION  */}
         <section className={styles.Project_Section}>
           <h1>PROJECTS</h1>
 
@@ -91,6 +82,40 @@ export default function Home() {
             </h3>
           </Link>
         </section>
+
+        {/* BLOGS SECTION */}
+        <section className={styles.Blog_Section}>
+          <h1>BLOG POSTS</h1>
+
+          <Link href={"/blog"} className={styles.View_Project}>
+            <h3>
+              View All Project
+              <Image
+                className={styles.NextArrowImg}
+                src={"/NextArrowIcon.svg"}
+                width={28}
+                height={28}
+                alt="next arrow icon"
+              />
+            </h3>
+          </Link>
+        </section>
+
+        <section className={styles.Contact_Section}>
+          <h1>CONTACT</h1>
+          <p>
+            You can send me over an e-mail on
+            <Link
+              href={"emailto:himanshup1308@gmail.com"}
+              className={`${styles.EmailID} Underline_Eff`}
+            >
+              &nbsp;himanshup1308@gmail.com
+            </Link>
+            <Image src={"/arrow.svg"} height={20} width={20} alt="arrow icon" />
+          </p>
+        </section>
+
+        <SocialWidgets center={true} />
       </section>
     </>
   );

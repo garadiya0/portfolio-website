@@ -33,18 +33,28 @@
 
 .Project_Section {
   margin-top: 8em;
+  margin-bottom: 4em;
 }
 
-.Project_Section h1 {
+.Blog_Section,
+.Contact_Section {
+  margin-bottom: 4em;
+}
+
+.Project_Section h1,
+.Blog_Section h1,
+.Contact_Section h1 {
   margin-bottom: 0.5em;
   font-size: 1.5em;
 }
 
-.Project_Section .View_Project {
+.Project_Section .View_Project,
+.Blog_Section .View_Project {
   display: inline-block;
 }
 
-.Project_Section h3 {
+.Project_Section h3,
+.Blog_Section h3 {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -53,10 +63,26 @@
   font-weight: 400;
 }
 
-.Project_Section .View_Project .NextArrowImg {
+.Project_Section .View_Project .NextArrowImg,
+.Blog_Section .View_Project .NextArrowImg {
   transition: transform 0.5s ease;
 }
 
-.Project_Section .View_Project:hover .NextArrowImg {
+.Project_Section .View_Project:hover .NextArrowImg,
+.Blog_Section .View_Project:hover .NextArrowImg {
   transform: translate(3px, 0);
+}
+
+.Contact_Section p {
+  display: flex;
+  align-items: center;
+}
+
+.Contact_Section p .EmailID {
+  color: rgb(180, 130, 251);
+}
+
+.Contact_Section p .EmailID:hover {
+  transition: all 600ms ease;
+  color: rgb(202 167 253)
 }

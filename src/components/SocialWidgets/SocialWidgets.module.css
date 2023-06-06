@@ -1,6 +1,8 @@
+.Socials{
+  margin: 2em 0;
+}
 
 .Socials ul {
-    margin: 3em 0;
     display: flex;
     gap: 1.8em;
     list-style-type: none;

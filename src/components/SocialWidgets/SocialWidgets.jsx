@@ -1,25 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Tooltip } from "@mui/material";
 import Zoom from "@mui/material";
 import styles from "./SocialWidgets.module.css";
 
-const SocialWidgets = () => {
+const SocialWidgets = (props) => {
   const TWITTER_URL = "https://twitter.com/garadiya0";
   const GITHUB_URL = "https://github.com/garadiya0/";
   const INSTAGRAM_URL = "https://www.instagram.com/codexhimanshu/";
   const HASHNODE_URL = "";
+
+  const centerElementCSS = { display: "flex", justifyContent: "center" };
+
   return (
-    <section className={styles.Socials}>
+    <section
+      className={styles.Socials}
+      style={props.center ? centerElementCSS : {}}
+    >
       <ul>
-        <Tooltip
-          title="Twitter"
-          placement="top"
-          TransitionComponent={Zoom}
-          arrow
-        >
-          <Link className={`${styles.Social_Twitter} Items`} href={TWITTER_URL}>
+        <Link className={`${styles.Social_Twitter} Items`} href={TWITTER_URL}>
+          <Tooltip
+            title="Twitter"
+            placement="top"
+            TransitionComponent={Zoom}
+            arrow
+            PopperProps={{
+              disablePortal: true,
+              popperOptions: {
+                positionFixed: true,
+                modifiers: {
+                  preventOverflow: {
+                    enabled: true,
+                    boundariesElement: "window", // where "window" is the boundary
+                  },
+                },
+              },
+            }}
+          >
             <li>
               <Image
                 src="/twitter.svg"
@@ -28,16 +46,28 @@ const SocialWidgets = () => {
                 height={25}
               />
             </li>
-          </Link>
-        </Tooltip>
+          </Tooltip>
+        </Link>
 
-        <Tooltip
-          title="Github"
-          placement="top"
-          TransitionComponent={Zoom}
-          arrow
-        >
-          <Link className={`${styles.Social_Github} Items`} href={GITHUB_URL}>
+        <Link className={`${styles.Social_Github} Items`} href={GITHUB_URL}>
+          <Tooltip
+            title="Github"
+            placement="top"
+            TransitionComponent={Zoom}
+            arrow
+            PopperProps={{
+              disablePortal: true,
+              popperOptions: {
+                positionFixed: true,
+                modifiers: {
+                  preventOverflow: {
+                    enabled: true,
+                    boundariesElement: "window", // where "window" is the boundary
+                  },
+                },
+              },
+            }}
+          >
             <li>
               <Image
                 width={29}
@@ -46,16 +76,28 @@ const SocialWidgets = () => {
                 alt="github icon"
               />
             </li>
-          </Link>
-        </Tooltip>
+          </Tooltip>
+        </Link>
 
-        <Tooltip
-          title="Instagram"
-          placement="top"
-          TransitionComponent={Zoom}
-          arrow
-        >
-          <Link className={`${styles.Social_Insta} Items`} href={INSTAGRAM_URL}>
+        <Link className={`${styles.Social_Insta} Items`} href={INSTAGRAM_URL}>
+          <Tooltip
+            title="Instagram"
+            placement="top"
+            TransitionComponent={Zoom}
+            arrow
+            PopperProps={{
+              disablePortal: true,
+              popperOptions: {
+                positionFixed: true,
+                modifiers: {
+                  preventOverflow: {
+                    enabled: true,
+                    boundariesElement: "window", // where "window" is the boundary
+                  },
+                },
+              },
+            }}
+          >
             <li>
               <Image
                 width={29}
@@ -64,18 +106,27 @@ const SocialWidgets = () => {
                 alt="instagram icon"
               />
             </li>
-          </Link>
-        </Tooltip>
+          </Tooltip>
+        </Link>
 
-        <Tooltip
-          title="Hashnode"
-          placement="top"
-          TransitionComponent={Zoom}
-          arrow
-        >
-          <Link
-            className={`${styles.Social_Hashnode} Items`}
-            href={HASHNODE_URL}
+        <Link className={`${styles.Social_Hashnode} Items`} href={HASHNODE_URL}>
+          <Tooltip
+            title="Hashnode"
+            placement="top"
+            TransitionComponent={Zoom}
+            arrow
+            PopperProps={{
+              disablePortal: true,
+              popperOptions: {
+                positionFixed: true,
+                modifiers: {
+                  preventOverflow: {
+                    enabled: true,
+                    boundariesElement: "window", // where "window" is the boundary
+                  },
+                },
+              },
+            }}
           >
             <li>
               <Image
@@ -85,8 +136,8 @@ const SocialWidgets = () => {
                 alt="hashnode icon"
               />
             </li>
-          </Link>
-        </Tooltip>
+          </Tooltip>
+        </Link>
       </ul>
     </section>
   );
