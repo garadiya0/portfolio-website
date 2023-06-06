@@ -1,0 +1,23 @@
+.Footer {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.Footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+}
+
+.Footer p .Link {
+    color: rgb(180, 130, 251);
+}
+
+.Footer p .Link:hover {
+    transition: all 600ms ease;
+    color: rgb(202 167 253)
+}

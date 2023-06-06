@@ -1,0 +1,43 @@
+.BlogPostCard {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 2em 1.5em;
+    width: 400px;
+
+    background: rgba(255, 255, 255, 0.053);
+    box-shadow: 0 8px 27px 0 rgb(19 10 32);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: default;
+}
+
+.BlogPostCard:hover {
+    cursor: pointer;
+    transition: all 600ms ease;
+    transform: scale(1.01);
+    border: 1px solid #fff;
+}
+
+.Blog_Img {
+    border-radius: 10px;
+    margin-bottom: 1.5em;
+}
+
+.Blog_Title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.Blog_Desc {
+    display: flex;
+    font-size: 14px;
+    color: #bbb;
+    align-self: self-start;
+}

@@ -2,7 +2,9 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "@/components/Footer/Footer";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
 import SocialWidgets from "@/components/SocialWidgets/SocialWidgets";
 
 export default function Home() {
@@ -20,7 +22,7 @@ export default function Home() {
             <p>
               I'm a web developer, and constantly exploring new technologies.
               Proficient in HTML, CSS, JavaScript, Next.js, Firebase, and MySQL.
-              I also enjoy sharing my knowledge through writing on Hashnode and
+              I also enjoy sharing my knowledge through writing on Medium and
               Twitter.
             </p>
           </div>
@@ -87,9 +89,18 @@ export default function Home() {
         <section className={styles.Blog_Section}>
           <h1>BLOG POSTS</h1>
 
+          <div className="row-1">
+            <BlogPostCard />
+            <BlogPostCard />
+          </div>
+          <div className="row-2">
+            <BlogPostCard />
+            <BlogPostCard />
+          </div>
+
           <Link href={"/blog"} className={styles.View_Project}>
             <h3>
-              View All Project
+              View All Blog Post
               <Image
                 className={styles.NextArrowImg}
                 src={"/NextArrowIcon.svg"}
@@ -101,10 +112,11 @@ export default function Home() {
           </Link>
         </section>
 
+        {/* CONTACT SECTION */}
         <section className={styles.Contact_Section}>
-          <h1>CONTACT</h1>
+          <h1>CONTACT ME</h1>
           <p>
-            You can send me over an e-mail on
+            Feel free to send me an email at
             <Link
               href={"emailto:himanshup1308@gmail.com"}
               className={`${styles.EmailID} Underline_Eff`}
@@ -115,7 +127,7 @@ export default function Home() {
           </p>
         </section>
 
-        <SocialWidgets center={true} />
+        <Footer />
       </section>
     </>
   );

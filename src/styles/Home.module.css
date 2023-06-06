@@ -1,5 +1,6 @@
 .Page {
-  margin: 5em 12%;
+  margin: 5em 12% 4em 12%;
+  cursor: default;
 }
 
 .Main {
@@ -33,28 +34,23 @@
 
 .Project_Section {
   margin-top: 8em;
-  margin-bottom: 4em;
 }
 
-.Blog_Section,
 .Contact_Section {
-  margin-bottom: 4em;
+  margin-top: 8em;
 }
 
 .Project_Section h1,
-.Blog_Section h1,
 .Contact_Section h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   font-size: 1.5em;
 }
 
-.Project_Section .View_Project,
-.Blog_Section .View_Project {
+.Project_Section .View_Project {
   display: inline-block;
 }
 
-.Project_Section h3,
-.Blog_Section h3 {
+.Project_Section h3 {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -72,6 +68,36 @@
 .Blog_Section .View_Project:hover .NextArrowImg {
   transform: translate(3px, 0);
 }
+
+.Blog_Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 8em;
+}
+
+.Blog_Section h1 {
+  margin-bottom: 0.8em;
+  font-size: 1.5em;
+}
+
+.Blog_Section div {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.Blog_Section .View_Project h3 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+
 
 .Contact_Section p {
   display: flex;
