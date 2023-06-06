@@ -45,7 +45,51 @@ export default function Home() {
         <section className={styles.Project_Section}>
           <h1>PROJECTS</h1>
 
-          <ProjectCard />
+          <ProjectCard
+            ProjectLogo="https://raw.githubusercontent.com/garadiya0/linkfy/main/public/link.svg"
+            LogoAltText="linkfy logo"
+            ProjectName="Linkfy"
+            ProjectDesc="Linkfy allows you to create shortened URLs for clean sharing ✨"
+            LiveLink="https://linkfy.vercel.app/"
+            LiveLinkName="linkfy.vercel.app"
+            GithubRepoURL="https://github.com/garadiya0/linkfy"
+            GithubRepoName="garadiya0/linkfy"
+          />
+
+          <ProjectCard
+            ProjectLogo="https://raw.githubusercontent.com/garadiya0/protonn/main/assets/logo.webp"
+            LogoAltText="protonn logo"
+            ProjectName="Protonn"
+            ProjectDesc="A demo landing page for a SAAS company"
+            LiveLink="https://get-protonn.netlify.app/"
+            LiveLinkName="get-protonn.netlify.app"
+            GithubRepoURL="https://github.com/garadiya0/protonn"
+            GithubRepoName="garadiya0/protonn"
+          />
+
+          <ProjectCard
+            ProjectLogo="https://raw.githubusercontent.com/garadiya0/polyverse-illustration/main/assets/favicon.png"
+            LogoAltText="polyverse logo"
+            ProjectName="Polyverse Illustration"
+            ProjectDesc="Landing page showcasing 3D illustrations across various categories"
+            LiveLink="https://polyverse.netlify.app/"
+            LiveLinkName="polyverse.netlify.app"
+            GithubRepoURL="https://github.com/garadiya0/polyverse-illustration/"
+            GithubRepoName="garadiya0/polyverse-illustration"
+          />
+
+          <Link href={"/projects"}>
+            <h3>
+              View All Project
+              <Image
+                className={styles.NextArrowImg}
+                src={"/NextArrowIcon.svg"}
+                width={28}
+                height={28}
+                alt="next arrow icon"
+              />
+            </h3>
+          </Link>
         </section>
       </section>
     </>

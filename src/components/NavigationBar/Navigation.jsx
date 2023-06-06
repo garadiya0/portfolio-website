@@ -10,19 +10,19 @@ const Navigation = () => {
       </div>
       <div className={styles.Right_Nav}>
         <ul className={styles.List}>
-          <Link href={"/"} className={`${styles.Items} highlight`}>
+          <Link href={"/"} className={`${styles.Items} Highlight_Eff`}>
             <li>Home</li>
           </Link>
-          <Link href={"/blog"} className={`${styles.Items} highlight`}>
+          <Link href={"/blog"} className={`${styles.Items} Highlight_Eff`}>
             <li>Blog</li>
           </Link>
-          <Link href={"/projects"} className={`${styles.Items} highlight`}>
+          <Link href={"/projects"} className={`${styles.Items} Highlight_Eff`}>
             <li>Projects</li>
           </Link>
-          <Link href={"/guestbook"} className={`${styles.Items} highlight`}>
+          <Link href={"/guestbook"} className={`${styles.Items} Highlight_Eff`}>
             <li>Guestbook</li>
           </Link>
-          <Link href={"/reach_out"} className={`${styles.Items} highlight`}>
+          <Link href={"/reach_out"} className={`${styles.Items} Highlight_Eff`}>
             <li>Reach Out</li>
           </Link>
         </ul>

@@ -31,9 +31,25 @@
   font-weight: 400;
 }
 
-.Project_Section {}
+.Project_Section {
+  margin-top: 8em;
+}
 
 .Project_Section h1 {
+  margin-bottom: 0.5em;
   font-size: 1.5em;
-  margin: 2em 0;
+}
+
+.Project_Section h3 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.Project_Section h3 .NextArrowImg {
+  animation-name: circle-3-keyframes;
+  animation-duration: 100ms;
 }
