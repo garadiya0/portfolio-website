@@ -5,7 +5,7 @@ const blog = () => {
   return (
     <>
       <Navigation currentPage="Blog"/>
-      <div>THIS IS BLOG PAGE!</div>;
+      <div>THIS IS BLOG PAGE!</div>
     </>
   );
 };

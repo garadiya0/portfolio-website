@@ -92,13 +92,27 @@ export default function Home() {
           <h1>BLOG POSTS</h1>
 
           <div className="row-1">
-            <BlogPostCard />
-            <BlogPostCard />
+            <BlogPostCard
+              BlogImg="/blogpostimg.webp"
+              BlogImgAlt="local storage in javascript"
+              BlogTitle="The only article you’ll need to work with Local Storage in JavaScript"
+              Date="25 May, 2023"
+              readTime="5"
+              BlogLink="https://medium.com/@garadiya0/the-only-article-youll-need-to-work-with-local-storage-in-javascript-f33d4a1c84e"
+            />
+            <BlogPostCard
+              BlogImg="/blogpostimg_2.webp"
+              BlogImgAlt="image of react and firebase logo"
+              BlogTitle="How to host a React-App using Firebase"
+              Date="07 June, 2023"
+              readTime="4"
+              BlogLink="https://medium.com/@garadiya0/how-to-host-a-react-app-using-firebase-7ebf1c4e27fa"
+            />
           </div>
-          <div className="row-2">
+          {/* <div className="row-2">
             <BlogPostCard />
             <BlogPostCard />
-          </div>
+          </div> */}
 
           <Link href={"/blog"} className={styles.View_Project}>
             <h3>

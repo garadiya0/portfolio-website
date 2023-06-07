@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.3",
     "@nextui-org/react": "^1.0.0-beta.13",
+    "depcheck": "^1.4.3",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"

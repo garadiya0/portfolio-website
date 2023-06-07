@@ -6,7 +6,7 @@ const projects = () => {
   return (
     <>
       <Navigation currentPage="Projects"/>
-      <div>THIS IS PROJECT PAGE!</div>;
+      <div>THIS IS PROJECT PAGE!</div>
     </>
   )
 }

@@ -5,7 +5,7 @@ const reach_out = () => {
   return (
     <>
       <Navigation currentPage="React Out"/>
-      <div>THIS IS REACT OUT PAGE!</div>;
+      <div>THIS IS REACT OUT PAGE!</div>
     </>
   );
 };

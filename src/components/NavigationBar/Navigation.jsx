@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navigation.module.css";
 import Link from "next/link";
 
 const Navigation = (props) => {
+  // const [navActive, setNavActive] = useState({ val: props.currentPage });
   return (
     <nav className={styles.Nav}>
       <div className={styles.Left_Nav}>
@@ -21,23 +22,52 @@ const Navigation = (props) => {
         <ul className={styles.List}>
           <Link
             href={"/"}
-            className={`nav_active ${styles.Items} Highlight_Eff`}
+            className={
+              props.currentPage === undefined
+                ? `${styles.Items} ${styles.active_nav}`
+                : `${styles.Items}`
+            }
           >
             <li>Home</li>
           </Link>
-          <Link href={"/blog"} className={`${styles.Items} Highlight_Eff`}>
+          <Link
+            href={"/blog"}
+            className={
+              props.currentPage === "Blog"
+                ? `${styles.Items} ${styles.active_nav}`
+                : `${styles.Items}`
+            }
+          >
             <li>Blog</li>
           </Link>
-          <Link href={"/projects"} className={`${styles.Items} Highlight_Eff`}>
+          <Link
+            href={"/projects"}
+            className={
+              props.currentPage === "Projects"
+                ? `${styles.Items} ${styles.active_nav}`
+                : `${styles.Items}`
+            }
+          >
             <li>Projects</li>
           </Link>
           <Link
             href={"/guestbook"}
-            className={`nav_active ${styles.Items} Highlight_Eff`}
+            className={
+              props.currentPage === "Guestbook"
+                ? `${styles.Items} ${styles.active_nav}`
+                : `${styles.Items}`
+            }
           >
             <li>Guestbook</li>
           </Link>
-          <Link href={"/reach_out"} className={`${styles.Items} Highlight_Eff`}>
+          <Link
+            href={"/reach_out"}
+            className={
+              props.currentPage === "React Out"
+                ? `${styles.Items} ${styles.active_nav}`
+                : `${styles.Items}`
+            }
+          >
             <li>Reach Out</li>
           </Link>
         </ul>

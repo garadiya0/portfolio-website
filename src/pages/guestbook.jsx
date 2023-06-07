@@ -5,7 +5,7 @@ const guestbook = () => {
   return (
     <>
       <Navigation currentPage="Guestbook" />
-      <div>THIS IS GUESTBOOK PAGE!</div>;
+      <div>THIS IS GUESTBOOK PAGE!</div>
     </>
   );
 };
