@@ -1,0 +1,21 @@
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em 2em;
+
+}
+
+.Main h1 {
+    font-size: 1.5em;
+}
+
+.Main p {
+    font-size: 1em;
+    color: #bbb;
+    margin-bottom: 1em;
+}
+
+.Container {
+    width: 70%;
+}

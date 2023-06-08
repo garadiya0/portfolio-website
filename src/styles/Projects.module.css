@@ -2,7 +2,7 @@
   margin: 5em 2em;
 }
 
-.Main h1 {
+.Main .Container h1 {
   margin-bottom: 1em;
   font-size: 1.5em;
   cursor: default;
