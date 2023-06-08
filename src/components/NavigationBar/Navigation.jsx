@@ -30,6 +30,16 @@ const Navigation = (props) => {
             <li>Home</li>
           </Link>
           <Link
+            href={"/about"}
+            className={
+              props.currentPage === "About"
+                ? `${styles.Items} ${styles.active_nav}`
+                : `${styles.Items}`
+            }
+          >
+            <li>About Me</li>
+          </Link>
+          <Link
             href={"/blog"}
             className={
               props.currentPage === "Blog"
@@ -58,16 +68,6 @@ const Navigation = (props) => {
             }
           >
             <li>Guestbook</li>
-          </Link>
-          <Link
-            href={"/reach_out"}
-            className={
-              props.currentPage === "React Out"
-                ? `${styles.Items} ${styles.active_nav}`
-                : `${styles.Items}`
-            }
-          >
-            <li>Reach Out</li>
           </Link>
         </ul>
       </div>
