@@ -3,12 +3,31 @@
 }
 
 .Main h1 {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   font-size: 1.5em;
+  cursor: default;
 }
 
 .Container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* View More on Github */
+.ViewGithub h3 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.ViewGithub .NextArrowImg {
+  transition: transform 0.5s ease;
+}
+
+.ViewGithub:hover .NextArrowImg {
+  transform: translate(3px, 0);
 }

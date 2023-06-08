@@ -8,30 +8,26 @@ const ProjectDetailCard = (props) => {
     <section className={styles.Main}>
       <Link className={styles.ProjectImgLink} href={""}>
         <Image
-          src={
-            "https://user-images.githubusercontent.com/110885026/244479286-f48a7069-523b-4608-a1c2-b553382e4ae3.png"
-          }
+          src={props.ProjectImg}
           className={styles.Img}
           width={300}
           height={168}
-          alt="linkfy logo"
+          alt={props.ProjectImgAlt}
         />
       </Link>
       <div className={styles.ProjectDetails}>
         <div>
-          <p className={styles.Project_Name}>Linkfy</p>
-          <p className={styles.Project_Desc}>
-            Linkfy allows you to create shortened URLs for clean sharing ✨
-          </p>
+          <p className={styles.Project_Name}>{props.ProjectName}</p>
+          <p className={styles.Project_Desc}>{props.ProjectDesc}</p>
 
           <div className={styles.Link}>
             <span className={`${styles.Site_Name}`}>
               <Link
                 className="Underline_Eff"
                 target="_blank"
-                href={"https://linkfy.vercel.app/"}
+                href={props.ProjectLiveLink}
               >
-                {"linkfy.vercel.app"}
+                {props.ProjectLiveLinkName}
               </Link>
               <Image
                 src="/arrow.svg"
@@ -50,9 +46,9 @@ const ProjectDetailCard = (props) => {
               <Link
                 className="Underline_Eff"
                 target="_blank"
-                href={"https://github.com/garadiya0/linkfy"}
+                href={props.ProjectGithubURL}
               >
-                {"garadiya0/linkfy"}
+                {props.ProjectGithubRepo}
               </Link>
               <Image
                 src="/arrow.svg"
@@ -66,7 +62,7 @@ const ProjectDetailCard = (props) => {
 
         <div>
           <Link
-            href={"https://github.com/garadiya0/linkfy"}
+            href={props.ProjectGithubURL}
             className={`${styles.LearnMore} Underline_Eff`}
           >
             <p>Learn More</p>

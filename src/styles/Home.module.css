@@ -1,5 +1,5 @@
 .Page {
-  /* margin: 5em 12% 4em 12%; */
+  margin: 5em 12% 4em 12%;
   cursor: default;
 }
 
@@ -97,8 +97,6 @@
   font-weight: 400;
 }
 
-
-
 .Contact_Section p {
   display: flex;
   align-items: center;
@@ -110,5 +108,5 @@
 
 .Contact_Section p .EmailID:hover {
   transition: all 600ms ease;
-  color: rgb(202 167 253)
+  color: rgb(202 167 253);
 }
