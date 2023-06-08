@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Navigation.module.css";
 import Link from "next/link";
 
 const Navigation = (props) => {
-  // const [navActive, setNavActive] = useState({ val: props.currentPage });
   return (
     <nav className={styles.Nav}>
       <div className={styles.Left_Nav}>

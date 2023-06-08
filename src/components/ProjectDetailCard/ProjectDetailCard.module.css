@@ -1,0 +1,80 @@
+.Main {
+    display: flex;
+    align-items: start;
+    gap: 1.5em;
+
+    background: rgba(255, 255, 255, 0.053);
+    box-shadow: 0 8px 27px 0 rgb(19 10 32);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: default;
+
+    margin: 0 0 2em 0;
+    padding: 1em 1.2em;
+}
+
+.Main .ProjectImgLink .Img {
+    border-radius: .75rem;
+    transition: filter 0.3s ease-in-out;
+}
+
+.Main .ProjectImgLink .Img:hover{
+    filter: brightness(50%);
+}
+
+.Main .ProjectDetails {
+    align-self: self-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.2em 0;
+    gap: 2.4em;
+}
+
+.ProjectDetails div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+
+.ProjectDetails .Project_Name {
+    color: #F3F3F3;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding-bottom: 0.2em;
+}
+
+.ProjectDetails .Project_Desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #bbb;
+}
+
+.ProjectDetails .Link {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    color: #bbb;
+}
+
+.Link .Github_Repo,
+.Link .Site_Name {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    cursor: pointer;
+}
+
+.ProjectDetails .LearnMore {
+    display: inline-block;
+}
+
+.ProjectDetails .LearnMore p {
+    font-size: 1em;
+    color: #F3F3F3;
+    /* font-weight: 500; */
+}

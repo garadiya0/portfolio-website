@@ -22,7 +22,7 @@
 
 .Right_Nav .List {
   display: flex;
-  gap: 1.5em;
+  gap: 0.8em;
   list-style-type: none;
   color: #7d8493;
 }
