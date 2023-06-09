@@ -13,6 +13,7 @@ const projects = () => {
       <section className={styles.Main}>
         <div className={styles.Container}>
           <h1>PROJECTS 🛠</h1>
+
           <ProjectDetailCard
             ProjectImg="https://user-images.githubusercontent.com/110885026/244479286-f48a7069-523b-4608-a1c2-b553382e4ae3.png"
             ProjectImgAlt="linkfy homepage"

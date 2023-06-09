@@ -1,0 +1,10 @@
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em 2em;
+}
+
+.Main h1 {
+    font-size: 1.5em;
+}

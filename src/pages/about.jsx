@@ -6,6 +6,9 @@ const about = () => {
   return (
     <>
       <Navigation currentPage="About" />
+      <section className={styles.Main}>
+        <h1>ABOUT ME</h1>
+      </section>
     </>
   );
 };
