@@ -46,13 +46,11 @@
   font-size: 1.5em;
 }
 
-.Project_Section .View_Project {
-  display: inline-block;
-}
+.View_Project {}
 
 .Project_Section h3 {
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 2px;
   font-size: 1.2em;
@@ -70,7 +68,7 @@
 }
 
 .Blog_Section {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: start;
   margin-top: 8em;
@@ -88,8 +86,11 @@
   margin-bottom: 2em;
 }
 
+.Blog_Section .View_Project {
+  /* display: flex; */
+}
+
 .Blog_Section .View_Project h3 {
-  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 2px;

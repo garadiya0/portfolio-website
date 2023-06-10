@@ -16,10 +16,7 @@ export default function Home() {
         <section className={styles.Main}>
           <div className={styles.Left_Main}>
             <h1>Hey! I'm Himanshu 👋</h1>
-            <p>
-              17 y/o • Self Taught Web Developer • Tech Enthusiast • Design
-              Agnostic
-            </p>
+            <p>17 y/o • Self Taught Web Developer • Tech Enthusiast</p>
 
             <p>
               I'm a web developer, and constantly exploring new technologies.
@@ -109,7 +106,7 @@ export default function Home() {
               BlogLink="https://medium.com/@garadiya0/how-to-host-a-react-app-using-firebase-7ebf1c4e27fa"
             />
           </div>
-          
+
           {/* <div className="row-2">
             <BlogPostCard />
             <BlogPostCard />
