@@ -40,7 +40,7 @@ const SocialWidgets = (props) => {
           >
             <li>
               <Image
-                src="/twitter.svg"
+                src="/icons/twitter.svg"
                 alt="twitter icon"
                 width={25}
                 height={25}
@@ -72,7 +72,7 @@ const SocialWidgets = (props) => {
               <Image
                 width={29}
                 height={29}
-                src="/github.svg"
+                src="/icons/github.svg"
                 alt="github icon"
               />
             </li>
@@ -102,7 +102,7 @@ const SocialWidgets = (props) => {
               <Image
                 width={29}
                 height={29}
-                src="/instagram.svg"
+                src="/icons/instagram.svg"
                 alt="instagram icon"
               />
             </li>
@@ -132,7 +132,7 @@ const SocialWidgets = (props) => {
               <Image
                 width={28}
                 height={28}
-                src="/medium.svg"
+                src="/icons/medium.svg"
                 alt="medium icon"
               />
             </li>

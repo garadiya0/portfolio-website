@@ -30,15 +30,15 @@ const ProjectDetailCard = (props) => {
                 {props.ProjectLiveLinkName}
               </Link>
               <Image
-                src="/arrow.svg"
+                src="/icons/link_arrow.svg"
                 width={20}
                 height={20}
-                alt="upwards arrow icon"
+                alt="link arrow icon"
               />
             </span>
             <span className={`${styles.Github_Repo}`}>
               <Image
-                src={"/github.svg"}
+                src={"/icons/github.svg"}
                 width={24}
                 height={24}
                 alt="github icon"
@@ -51,7 +51,7 @@ const ProjectDetailCard = (props) => {
                 {props.ProjectGithubRepo}
               </Link>
               <Image
-                src="/arrow.svg"
+                src="/icons/link_arrow.svg"
                 width={20}
                 height={20}
                 alt="upwards arrow icon"

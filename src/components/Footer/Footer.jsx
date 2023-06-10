@@ -19,10 +19,10 @@ const Footer = () => {
           &nbsp;Himanshu Garadiya
         </Link>{" "}
         <Image
-          src="/arrow.svg"
+          src="/icons/link_arrow.svg"
           width={20}
           height={20}
-          alt="upwards arrow icon"
+          alt="link arrow icon"
         />
       </p>
     </section>

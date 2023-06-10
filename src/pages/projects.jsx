@@ -77,7 +77,7 @@ const projects = () => {
               View More on GitHub
               <Image
                 className={styles.NextArrowImg}
-                src={"/NextArrowIcon.svg"}
+                src={"/icons/next_arrow.svg"}
                 width={28}
                 height={28}
                 alt="next arrow icon"

@@ -15,7 +15,7 @@ const blog = () => {
         <div className={styles.Container}>
           <BlogPostCardDetail
             BlogLink="https://medium.com/@garadiya0/the-only-article-youll-need-to-work-with-local-storage-in-javascript-f33d4a1c84e"
-            BlogImg="/blogpostimg.webp"
+            BlogImg="/temp/blogpostimg.webp"
             BlogImgAlt="img"
             BlogTitle="The only article you’ll need to work with Local Storage in JavaScript"
             BlogSubHeading="If you’ve come here to read this article about local storage, then you probably know tidbits of localStorage. But even if you don’t, no problem, we’ve got you covered! In this article, we’ll learn what it is, how to use it efficie..."
@@ -25,7 +25,7 @@ const blog = () => {
 
           <BlogPostCardDetail
             BlogLink="https://medium.com/@garadiya0/how-to-host-a-react-app-using-firebase-7ebf1c4e27fa"
-            BlogImg="/blogpostimg_2.webp"
+            BlogImg="/temp/blogpostimg_2.webp"
             BlogImgAlt="img"
             BlogTitle="How to host a React-App using Firebase"
             BlogSubHeading="ReactJS, also known as React, is a popular JavaScript library for building user interfaces. It was developed by Facebook and released in 2013. React allows developers to create reusable UI components that efficient..."
@@ -41,7 +41,7 @@ const blog = () => {
               View More on Medium
               <Image
                 className={styles.NextArrowImg}
-                src={"/NextArrowIcon.svg"}
+                src={"/icons/next_arrow.svg"}
                 width={28}
                 height={28}
                 alt="next arrow icon"

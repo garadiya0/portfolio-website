@@ -75,7 +75,7 @@ export default function Home() {
               View All Project
               <Image
                 className={styles.NextArrowImg}
-                src={"/NextArrowIcon.svg"}
+                src={"/icons/next_arrow.svg"}
                 width={28}
                 height={28}
                 alt="next arrow icon"
@@ -90,7 +90,7 @@ export default function Home() {
 
           <div className="row-1">
             <BlogPostCard
-              BlogImg="/blogpostimg.webp"
+              BlogImg="/temp/blogpostimg.webp"
               BlogImgAlt="local storage in javascript"
               BlogTitle="The only article you’ll need to work with Local Storage in JavaScript"
               Date="25 May, 2023"
@@ -98,7 +98,7 @@ export default function Home() {
               BlogLink="https://medium.com/@garadiya0/the-only-article-youll-need-to-work-with-local-storage-in-javascript-f33d4a1c84e"
             />
             <BlogPostCard
-              BlogImg="/blogpostimg_2.webp"
+              BlogImg="/temp/blogpostimg_2.webp"
               BlogImgAlt="image of react and firebase logo"
               BlogTitle="How to host a React-App using Firebase"
               Date="07 June, 2023"
@@ -117,7 +117,7 @@ export default function Home() {
               View All Blog Post
               <Image
                 className={styles.NextArrowImg}
-                src={"/NextArrowIcon.svg"}
+                src={"/icons/next_arrow.svg"}
                 width={28}
                 height={28}
                 alt="next arrow icon"
@@ -137,7 +137,12 @@ export default function Home() {
             >
               &nbsp;himanshup1308@gmail.com
             </Link>
-            <Image src={"/arrow.svg"} height={20} width={20} alt="arrow icon" />
+            <Image
+              src={"/icons/link_arrow.svg"}
+              height={20}
+              width={20}
+              alt="link arrow icon"
+            />
           </p>
         </section>
 

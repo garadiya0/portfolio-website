@@ -41,10 +41,10 @@ const about = () => {
             >
               Twitter{" "}
               <Image
-                src={"/arrow.svg"}
+                src={"/icons/link_arrow.svg"}
                 width={23}
                 height={23}
-                alt="arrow icon"
+                alt="link arrow icon"
               />
             </Link>
           </span>
@@ -57,7 +57,12 @@ const about = () => {
             >
               {" "}
               himanshup1308@gmail.com
-              <Image src="/arrow.svg" height={23} width={23} alt="arrow icon" />
+              <Image
+                src="/icons/link_arrow.svg"
+                height={23}
+                width={23}
+                alt="link arrow icon"
+              />
             </Link>
           </span>
         </div>
