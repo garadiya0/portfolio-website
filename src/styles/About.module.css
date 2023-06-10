@@ -1,50 +1,115 @@
 .Main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em 2em;
 }
 
 .Main h1 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .Main .Container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 70%;
-    margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  margin-top: 1em;
 }
 
 .Container span {
-    font-size: 1.3em;
-    margin: 0.3em 0;
-    line-height: 1.5;
-    text-align: left;
+  font-size: 1.3em;
+  margin: 0.3em 0;
+  line-height: 1.5;
+  text-align: left;
 }
 
 .LinkEle {
-    position: relative;
-    align-items: center;
-    display: inline-flex;
-    color: rgb(180, 130, 251);
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+  color: rgb(180, 130, 251);
 }
 
 .LinkEle::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: rgb(180, 130, 251);
-    transform-origin: bottom right;
-    transform: scaleX(0);
-    transition: transform 0.25s ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgb(180, 130, 251);
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
 }
 
 .LinkEle:hover::before {
-    transform-origin: bottom left;
-    transform: scaleX(1);
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+/* MEDIA QUERIES */
+/* SMALL MOBILE DEVICES OR FOR EXPREMENTING PEOPLE */
+@media screen and (min-width: 0px) and (max-width: 360px) {
+  .Main .Container {
+    width: 100%;
+    margin: 0 1em;
+  }
+
+  .Container span {
+    font-size: 1em;
+  }
+}
+
+/* AVERAGE MOBILE DEVICES  */
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .Main .Container {
+    width: 100%;
+  }
+
+  .Container span {
+    font-size: 1.2em;
+  }
+
+  .Main h1 {
+    font-size: 1.2em;
+  }
+}
+
+/* IPADS AND TABLETS  */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .Main .Container {
+    width: 100%;
+  }
+
+  .Container span {
+    font-size: 1em;
+  }
+
+  .Main h1 {
+    font-size: 1.3em;
+  }
+}
+
+/* SMALL SCREEN AND LAPTOP (LIKE ME!! LOL🤣) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .Main .Container {
+    width: 90%;
+  }
+
+  .Main h1 {
+    font-size: 1.3em;
+  }
+
+  .Container span {
+    font-size: 1em;
+  }
+}
+
+/* DESKTOP AND LARGE SCREEN */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .Main .Container {
+    width: 80%;
+  }
 }

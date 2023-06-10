@@ -26,7 +26,7 @@ const guestbook = () => {
           />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

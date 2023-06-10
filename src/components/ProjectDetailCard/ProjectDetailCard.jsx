@@ -7,7 +7,7 @@ const ProjectDetailCard = (props) => {
   return (
     <section className={styles.Main}>
       <Link className={styles.ProjectImgLink} href={""}>
-        <Image
+        <img
           src={props.ProjectImg}
           className={styles.Img}
           width={300}

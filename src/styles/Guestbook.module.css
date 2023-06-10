@@ -1,40 +1,53 @@
 .Main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em 2em;
 }
 
 .Main h1 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .Main p {
-    font-size: 1em;
-    color: #bbb;
-    margin-bottom: 1em;
+  font-size: 1em;
+  color: #bbb;
+  margin-bottom: 1em;
 }
 
 .Container {
-    width: 70%;
+  width: 70%;
 }
-
 
 /* MEDIA QUERIES */
 /* SMALL MOBILE DEVICES OR FOR EXPREMENTING PEOPLE */
-@media screen and (min-width: 0px) and (max-width: 360px) {}
+@media screen and (min-width: 0px) and (max-width: 360px) {
+  .Main {
+    margin: 2em 1em;
+  }
+
+  .Container {
+    width: 100%;
+  }
+}
 
 /* AVERAGE MOBILE DEVICES  */
-@media screen and (min-width: 360px) and (max-width: 480px) {}
-
-/* IPADS AND TABLETS  */
-@media screen and (min-width: 481px) and (max-width: 768px) {}
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .Container {
+    width: 100%;
+  }
+}
 
 /* SMALL SCREEN AND LAPTOP (LIKE ME!! LOL🤣) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .Container {
+    width: 90%;
+  }
+}
 
 /* DESKTOP AND LARGE SCREEN */
-@media screen and (min-width: 1025px) and (max-width: 1200px) {}
-
-/* EXTRA LARGE SCREENS & TV */
-@media screen and (min-width: 1201px) {}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .Container {
+    width: 80%;
+  }
+}

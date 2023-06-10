@@ -17,7 +17,7 @@
 }
 
 .Main .ProjectImgLink .Img {
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     transition: filter 0.3s ease-in-out;
 }
 
@@ -34,7 +34,6 @@
 
     display: grid;
     grid-template-rows: auto 1fr;
-
 }
 
 .ProjectDetails div:first-child {
@@ -48,9 +47,8 @@
     grid-row: 2;
 }
 
-
 .ProjectDetails .Project_Name {
-    color: #F3F3F3;
+    color: #f3f3f3;
     font-size: 1.5em;
     font-weight: 500;
     padding-bottom: 0.2em;
@@ -85,5 +83,121 @@
 
 .ProjectDetails .LearnMore p {
     font-size: 1em;
-    color: #F3F3F3;
+    color: #f3f3f3;
+}
+
+/* MEDIA QUERIES */
+/* SMALL MOBILE DEVICES OR FOR EXPREMENTING PEOPLE */
+@media screen and (min-width: 0px) and (max-width: 360px) {}
+
+/* AVERAGE MOBILE DEVICES  */
+@media screen and (min-width: 360px) and (max-width: 480px) {}
+
+/* IPADS AND TABLETS  */
+@media screen and (min-width: 481px) and (max-width: 649px) {
+    .Main {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+
+        padding: 1em 1.5em;
+    }
+
+    .ProjectDetails .Project_Desc {
+        word-wrap: break-word;
+    }
+
+    .Main .ProjectImgLink .Img {
+        width: 365px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ProjectDetails .Link {
+        gap: 0.5em;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 768px) {
+    .Main {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+
+        padding: 1em 1.5em;
+    }
+
+    .ProjectDetails .Project_Desc {
+        word-wrap: break-word;
+    }
+
+    .Main .ProjectImgLink .Img {
+        width: 365px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ProjectDetails .Link {
+        gap: 2em;
+    }
+}
+
+/* SMALL SCREEN AND LAPTOP (LIKE ME!! LOL🤣) */
+@media screen and (min-width: 769px) and (max-width: 859px) {
+    .Main {
+        width: 100%;
+        height: auto;
+    }
+
+    .ProjectDetails .Project_Desc {
+        word-wrap: break-word;
+    }
+
+    .ProjectDetails .Link {
+        margin-top: 0.5em;
+        flex-direction: column;
+        font-size: 15px;
+        align-items: flex-start;
+        gap: 0em;
+    }
+
+    .ProjectDetails .LearnMore {
+        margin-top: 0.8em;
+    }
+}
+
+@media screen and (min-width: 860px) and (max-width: 1024px) {
+    .Main {
+        width: 100%;
+        height: auto;
+    }
+
+    .ProjectDetails .Project_Desc {
+        word-wrap: break-word;
+    }
+
+    .ProjectDetails .Link {
+        margin-top: 0.5em;
+        gap: 2em;
+    }
+
+    .ProjectDetails .LearnMore {
+        margin-top: 0.8em;
+    }
+}
+
+/* DESKTOP AND LARGE SCREEN */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .Main {
+        width: 85%;
+    }
+}
+
+/* EXTRA LARGE SCREENS & TV */
+@media screen and (min-width: 1201px) {
+    .Main {
+        width: 80%;
+    }
 }
