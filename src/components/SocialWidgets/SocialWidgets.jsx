@@ -9,7 +9,7 @@ const SocialWidgets = (props) => {
   const TWITTER_URL = "https://twitter.com/garadiya0";
   const GITHUB_URL = "https://github.com/garadiya0/";
   const INSTAGRAM_URL = "https://www.instagram.com/codexhimanshu/";
-  const HASHNODE_URL = "";
+  const MEDIUM_URL = "https://medium.com/@garadiya0";
 
   const centerElementCSS = { display: "flex", justifyContent: "center" };
 
@@ -109,9 +109,9 @@ const SocialWidgets = (props) => {
           </Tooltip>
         </Link>
 
-        <Link className={`${styles.Social_Hashnode} Items`} href={HASHNODE_URL}>
+        <Link className={`${styles.Social_Medium} Items`} href={MEDIUM_URL}>
           <Tooltip
-            title="Hashnode"
+            title="Medium"
             placement="top"
             TransitionComponent={Zoom}
             arrow
@@ -132,8 +132,8 @@ const SocialWidgets = (props) => {
               <Image
                 width={28}
                 height={28}
-                src="/hashnode.svg"
-                alt="hashnode icon"
+                src="/medium.svg"
+                alt="medium icon"
               />
             </li>
           </Tooltip>

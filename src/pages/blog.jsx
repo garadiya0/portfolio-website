@@ -13,10 +13,26 @@ const blog = () => {
       <section className={styles.Main}>
         <h1>BLOGS</h1>
         <div className={styles.Container}>
-          <BlogPostCardDetail />
-          <BlogPostCardDetail />
-          <BlogPostCardDetail />
-          <BlogPostCardDetail />
+          <BlogPostCardDetail
+            BlogLink="https://medium.com/@garadiya0/the-only-article-youll-need-to-work-with-local-storage-in-javascript-f33d4a1c84e"
+            BlogImg="/blogpostimg.webp"
+            BlogImgAlt="img"
+            BlogTitle="The only article you’ll need to work with Local Storage in JavaScript"
+            BlogSubHeading="If you’ve come here to read this article about local storage, then you probably know tidbits of localStorage. But even if you don’t, no problem, we’ve got you covered! In this article, we’ll learn what it is, how to use it efficie..."
+            Date="25 May, 2023"
+            ReadTime="5"
+          />
+
+          <BlogPostCardDetail
+            BlogLink="https://medium.com/@garadiya0/how-to-host-a-react-app-using-firebase-7ebf1c4e27fa"
+            BlogImg="/blogpostimg_2.webp"
+            BlogImgAlt="img"
+            BlogTitle="How to host a React-App using Firebase"
+            BlogSubHeading="ReactJS, also known as React, is a popular JavaScript library for building user interfaces. It was developed by Facebook and released in 2013. React allows developers to create reusable UI components that efficient..."
+            Date="07 June, 2023"
+            ReadTime="4"
+          />
+
           <Link
             href={"https://medium.com/@garadiya0"}
             className={styles.ViewMedium}
