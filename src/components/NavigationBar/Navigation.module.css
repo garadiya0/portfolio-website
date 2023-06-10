@@ -44,3 +44,98 @@
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.1);
 }
+
+/* MEDIA QUERIES */
+/* SMALL MOBILE DEVICES OR FOR EXPREMENTING PEOPLE */
+@media screen and (min-width: 0px) and (max-width: 360px) {
+  .Nav {
+    margin: 1.5em 0;
+    justify-content: center;
+  }
+
+  .Left_Nav {
+    display: none;
+  }
+
+  .Right_Nav .List {
+    gap: 0;
+    font-size: 0.5em;
+  }
+
+  .Right_Nav .List .Items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Right_Nav .List .Items li {
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+/* AVERAGE MOBILE DEVICES  */
+@media screen and (min-width: 360px) and (max-width: 400px) {
+  .Nav {
+    margin: 1.5em 0;
+    justify-content: center;
+  }
+
+  .Left_Nav {
+    display: none;
+  }
+
+  .Right_Nav .List {
+    gap: 0;
+    font-size: 0.7em;
+  }
+
+  .Right_Nav .List .Items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Right_Nav .List .Items li {
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 480px) {
+
+  .Nav {
+    margin: 1.5em 0;
+    justify-content: center;
+  }
+
+  .Left_Nav {
+    display: none;
+  }
+
+  .Right_Nav .List {
+    gap: 0;
+    font-size: 0.87em;
+  }
+
+  .Right_Nav .List .Items li {
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+/* IPADS AND TABLETS  */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .Nav {
+    margin: 1.5em 0;
+    justify-content: center;
+  }
+
+  .Left_Nav {
+    display: none;
+  }
+
+  .Right_Nav .List {
+    gap: 0.5em;
+  }
+}
