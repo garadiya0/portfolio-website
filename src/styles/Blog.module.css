@@ -1,0 +1,42 @@
+.Main {
+    margin: 3em 15% 2em 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Main h1 {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: default;
+}
+
+.Container {}
+
+.Container .ViewMedium {
+    margin-top: 2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* View More on Medium */
+.ViewMedium h3 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.ViewMedium .NextArrowImg {
+    transition: transform 0.5s ease;
+}
+
+.ViewMedium:hover .NextArrowImg {
+    transform: translate(3px, 0);
+}

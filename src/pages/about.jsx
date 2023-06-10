@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/About.module.css";
 import Navigation from "@/components/NavigationBar/Navigation";
+import Footer from "@/components/Footer/Footer";
 
 const about = () => {
   return (
@@ -62,6 +63,7 @@ const about = () => {
           </span>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
