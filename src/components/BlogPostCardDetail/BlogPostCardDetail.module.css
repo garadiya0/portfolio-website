@@ -47,3 +47,32 @@
     color: #bbb;
     align-self: self-start;
 }
+
+@media screen and (min-width: 0) and (max-width: 360px) {
+    .BlogPostCard {
+        width: 90vw;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .Blog_Img {
+        width: 80vw;
+        border-radius: 10px;
+        margin-bottom: 1.5em;
+    }
+}
+
+/* AVERAGE MOBILE DEVICES  */
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    .BlogPostCard {
+        width: 340px;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .Blog_Img {
+        width: 300px;
+        border-radius: 10px;
+        margin-bottom: 1.5em;
+    }
+}
