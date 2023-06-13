@@ -1,53 +1,59 @@
 .Footer {
-    margin: 2em 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .Footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
 }
 
 .Footer p .Link {
-    color: rgb(180, 130, 251);
+  color: rgb(180, 130, 251);
 }
 
 .Footer p .Link:hover {
-    transition: all 600ms ease;
-    color: rgb(202 167 253)
+  transition: all 600ms ease;
+  color: rgb(202 167 253);
 }
 
 @media screen and (min-width: 0) and (max-width: 360px) {
-    .Footer {
-        gap: 0;
-        margin-top: 0;
-    }
+  .Footer {
+    gap: 0;
+    margin-top: 0;
+  }
 
-    .Footer p {
-        flex-direction: column;
-    }
+  .Footer p {
+    flex-direction: column;
+  }
 
-    .Link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 480px) {
-    .Footer {
-        margin-top: 1em;
-    }
+  .Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Footer {
+    margin-top: 1em;
+  }
 }
 
 @media screen and (min-width: 480px) {
-    .Link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
