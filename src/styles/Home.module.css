@@ -111,3 +111,43 @@
   transition: all 600ms ease;
   color: rgb(202 167 253);
 }
+
+/* MEDIA QUERIES */
+/* SMALL MOBILE DEVICES OR FOR EXPREMENTING PEOPLE */
+@media screen and (min-width: 0px) and (max-width: 360px) {}
+
+/* AVERAGE MOBILE DEVICES  */
+@media screen and (min-width: 360px) and (max-width: 480px) {}
+
+/* IPADS AND TABLETS  */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .Page {
+    margin: 5em 5% 5em 5%;
+    cursor: default;
+  }
+
+  .Main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  
+}
+
+/* SMALL SCREEN AND LAPTOP (LIKE ME!! LOL🤣) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .Page {
+    margin: 5em 5% 5em 5%;
+    cursor: default;
+  }
+
+  .Main {
+    gap: 1em;
+  }
+
+  .Blog_Section .row_1 {
+    flex-wrap: wrap;
+  }
+}

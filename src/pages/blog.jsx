@@ -33,6 +33,16 @@ const blog = () => {
             ReadTime="4"
           />
 
+          <BlogPostCardDetail
+            BlogLink="https://medium.com/@garadiya0/which-package-manager-to-choose-for-your-next-javascript-project-13eab214a05c"
+            BlogImg="/temp/blogpostimg_3.webp"
+            BlogImgAlt="img"
+            BlogTitle="Which package manager to choose for your next javascript project?"
+            BlogSubHeading="What is a package manager? In the context of JavaScript, a package manager allows developers to easily install, manage, and distribute JavaScript modules or libraries for both server-side and client-side..."
+            Date="12 June, 2023"
+            ReadTime="3"
+          />
+
           <Link
             href={"https://medium.com/@garadiya0"}
             className={styles.ViewMedium}

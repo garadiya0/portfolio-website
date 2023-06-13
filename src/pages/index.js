@@ -26,7 +26,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.Right_Main}>
-            <img src="/pfp.png" alt="profile picture" width={"250"} />
+            <img src="/pfp.webp" alt="profile picture" width={"250"} />
           </div>
         </section>
 
@@ -88,7 +88,7 @@ export default function Home() {
         <section className={styles.Blog_Section}>
           <h1>BLOG POSTS</h1>
 
-          <div className="row-1">
+          <div className={styles.row_1}>
             <BlogPostCard
               BlogImg="/temp/blogpostimg.webp"
               BlogImgAlt="local storage in javascript"
