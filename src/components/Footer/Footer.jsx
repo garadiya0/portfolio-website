@@ -17,13 +17,13 @@ const Footer = () => {
           className={`Underline_Eff ${styles.Link}`}
         >
           &nbsp;Himanshu Garadiya
-        </Link>{" "}
         <Image
           src="/icons/link_arrow.svg"
           width={20}
           height={20}
           alt="link arrow icon"
-        />
+          />
+          </Link>{" "}
       </p>
     </section>
   );

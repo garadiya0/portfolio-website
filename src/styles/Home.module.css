@@ -251,7 +251,7 @@
 /* IPADS AND TABLETS  */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .Page {
-    margin: 5em 5% 5em 5%;
+    margin: 3em 5%;
     cursor: default;
   }
 
@@ -260,6 +260,58 @@
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 1em;
+  }
+
+  .Right_Main img {
+    width: 150px;
+  }
+
+  .Left_Main h1 {
+    font-size: 1.8em;
+  }
+
+  .Left_Main p {
+    font-size: 1.2em;
+  }
+
+  .Left_Main p:last-child {
+    font-size: 1.2em;
+  }
+
+  .Project_Section,
+  .Blog_Section,
+  .Contact_Section {
+    margin-top: 5em;
+  }
+
+  .Blog_Section {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .Blog_Section .row_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Contact_Section {
+    align-self: flex-start;
+  }
+
+  .Contact_Section p {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .Contact_Section p .EmailID {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 }

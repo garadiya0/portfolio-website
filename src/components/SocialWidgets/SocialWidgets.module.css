@@ -30,6 +30,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .Socials ul {
+    gap: 1em;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 480px) {
