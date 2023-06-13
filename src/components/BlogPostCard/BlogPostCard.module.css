@@ -41,3 +41,25 @@
   color: #bbb;
   align-self: self-start;
 }
+
+@media screen and (min-width: 0px) and (max-width: 360px) {
+  .BlogPostCard {
+    width: 250px;
+  }
+
+  .BlogPostCard img {
+    width: 220px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .BlogPostCard {
+    width: 300px;
+  }
+
+  .BlogPostCard img {
+    width: 250px;
+    height: auto;
+  }
+}

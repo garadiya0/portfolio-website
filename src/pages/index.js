@@ -136,13 +136,13 @@ export default function Home() {
               className={`${styles.EmailID} Underline_Eff`}
             >
               &nbsp;himanshup1308@gmail.com
+              <img
+                src={"/icons/link_arrow.svg"}
+                height={20}
+                width={20}
+                alt="link arrow icon"
+              />
             </Link>
-            <Image
-              src={"/icons/link_arrow.svg"}
-              height={20}
-              width={20}
-              alt="link arrow icon"
-            />
           </p>
         </section>
 
