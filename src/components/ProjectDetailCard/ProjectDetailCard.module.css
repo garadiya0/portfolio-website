@@ -88,18 +88,11 @@
 
 /* MEDIA QUERIES */
 /* SMALL MOBILE DEVICES OR FOR EXPREMENTING PEOPLE */
-@media screen and (min-width: 0px) and (max-width: 360px) {}
-
-/* AVERAGE MOBILE DEVICES  */
-@media screen and (min-width: 360px) and (max-width: 480px) {}
-
-/* IPADS AND TABLETS  */
-@media screen and (min-width: 481px) and (max-width: 649px) {
+@media screen and (min-width: 0px) and (max-width: 360px) {
     .Main {
-        width: 100%;
+        width: 250px;
         height: auto;
         flex-direction: column;
-
         padding: 1em 1.5em;
     }
 
@@ -108,23 +101,84 @@
     }
 
     .Main .ProjectImgLink .Img {
-        width: 365px;
+        width: 200px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ProjectDetails div:last-child {
+        margin: 0.5em 0;
+        align-self: flex-start;
+    }
+
+    .ProjectDetails .Link {
+        flex-direction: column;
+        gap: 0.2em;
+    }
+}
+
+/* AVERAGE MOBILE DEVICES  */
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    .Main {
+        width: 320px;
+        height: auto;
+        flex-direction: column;
+        padding: 1em 1.5em;
+    }
+
+    .ProjectDetails .Project_Desc {
+        word-wrap: break-word;
+    }
+
+    .Main .ProjectImgLink .Img {
+        width: 270px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ProjectDetails div:last-child {
+        margin: 0.5em 0;
+        align-self: flex-start;
+    }
+
+    .ProjectDetails .Link {
+        flex-direction: column;
+        gap: 0.2em;
+    }
+}
+
+/* IPADS AND TABLETS  */
+@media screen and (min-width: 481px) and (max-width: 650px) {
+    .Main {
+        width: 440px;
+        height: auto;
+        flex-direction: column;
+        padding: 1em 1.5em;
+    }
+
+    .ProjectDetails .Project_Desc {
+        word-wrap: break-word;
+    }
+
+    .Main .ProjectImgLink .Img {
+        width: 385px;
         height: auto;
         padding: 0;
         margin: 0;
     }
 
     .ProjectDetails .Link {
-        gap: 0.5em;
+        gap: 2em;
     }
 }
 
 @media screen and (min-width: 650px) and (max-width: 768px) {
     .Main {
-        width: 80%;
+        width: 440px;
         height: auto;
         flex-direction: column;
-
         padding: 1em 1.5em;
     }
 
@@ -133,7 +187,7 @@
     }
 
     .Main .ProjectImgLink .Img {
-        width: 365px;
+        width: 385px;
         height: auto;
         padding: 0;
         margin: 0;

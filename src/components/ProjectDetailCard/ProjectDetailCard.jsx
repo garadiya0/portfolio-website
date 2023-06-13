@@ -21,6 +21,7 @@ const ProjectDetailCard = (props) => {
           <p className={styles.Project_Desc}>{props.ProjectDesc}</p>
 
           <div className={styles.Link}>
+
             <span className={`${styles.Site_Name}`}>
               <Link
                 className="Underline_Eff"
@@ -57,6 +58,7 @@ const ProjectDetailCard = (props) => {
                 alt="upwards arrow icon"
               />
             </span>
+
           </div>
         </div>
 

@@ -46,12 +46,3 @@
     margin: 2em 2em;
   }
 }
-
-/* SMALL SCREEN AND LAPTOP (LIKE ME!! LOL🤣) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {}
-
-/* DESKTOP AND LARGE SCREEN */
-@media screen and (min-width: 1025px) and (max-width: 1200px) {}
-
-/* EXTRA LARGE SCREENS & TV */
-@media screen and (min-width: 1201px) {}
