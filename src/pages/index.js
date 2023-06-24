@@ -1,14 +1,35 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
 import Footer from "@/components/Footer/Footer";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
 import SocialWidgets from "@/components/SocialWidgets/SocialWidgets";
 import Navigation from "@/components/NavigationBar/Navigation";
+import getRelativeDate from "@/utils/getRelativeDate";
 
 export default function Home() {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      await axios
+        .get("/api/getBlogs?limit=2")
+        .then((res) => {
+          setBlogs(res.data);
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -89,22 +110,18 @@ export default function Home() {
           <h1>BLOG POSTS</h1>
 
           <div className={styles.row_1}>
-            <BlogPostCard
-              BlogImg="/temp/blogpostimg.webp"
-              BlogImgAlt="local storage in javascript"
-              BlogTitle="The only article you’ll need to work with Local Storage in JavaScript"
-              Date="25 May, 2023"
-              readTime="5"
-              BlogLink="https://medium.com/@garadiya0/the-only-article-youll-need-to-work-with-local-storage-in-javascript-f33d4a1c84e"
-            />
-            <BlogPostCard
-              BlogImg="/temp/blogpostimg_2.webp"
-              BlogImgAlt="image of react and firebase logo"
-              BlogTitle="How to host a React-App using Firebase"
-              Date="07 June, 2023"
-              readTime="4"
-              BlogLink="https://medium.com/@garadiya0/how-to-host-a-react-app-using-firebase-7ebf1c4e27fa"
-            />
+            {blogs.map((article) => {
+              return (
+                <BlogPostCard
+                  BlogImg={article.blog_img_url}
+                  BlogImgAlt={article.blog_img_alt}
+                  BlogTitle={article.blog_title}
+                  Date={getRelativeDate(article.published_date)}
+                  readTime={article.read_time}
+                  BlogLink={article.article_link}
+                />
+              );
+            })}
           </div>
 
           {/* <div className="row-2">
