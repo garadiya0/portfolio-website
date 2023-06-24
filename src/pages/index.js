@@ -113,6 +113,7 @@ export default function Home() {
             {blogs.map((article) => {
               return (
                 <BlogPostCard
+                key={article._id}
                   BlogImg={article.blog_img_url}
                   BlogImgAlt={article.blog_img_alt}
                   BlogTitle={article.blog_title}
