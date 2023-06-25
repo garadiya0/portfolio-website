@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const fetchBlogs = async () => {
       await axios
-        .get("/api/getBlogs?limit=2", { timeout: 5000 })
+        .get("/api/getBlogs?limit=2")
         .then((res) => {
           setBlogs(res.data);
           console.log(res.data);
