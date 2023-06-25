@@ -10,6 +10,7 @@ import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
 import SocialWidgets from "@/components/SocialWidgets/SocialWidgets";
 import Navigation from "@/components/NavigationBar/Navigation";
 import getRelativeDate from "@/utils/getRelativeDate";
+import { Loading } from "@nextui-org/react";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -20,7 +21,6 @@ export default function Home() {
         .get("/api/getBlogs?limit=2")
         .then((res) => {
           setBlogs(res.data);
-          console.log(res.data);
         })
         .catch((err) => {
           console.log(err);
@@ -110,19 +110,23 @@ export default function Home() {
           <h1>BLOG POSTS</h1>
 
           <div className={styles.row_1}>
-            {blogs.map((article) => {
-              return (
-                <BlogPostCard
-                  key={article._id}
-                  BlogImg={article.blog_img_url}
-                  BlogImgAlt={article.blog_img_alt}
-                  BlogTitle={article.blog_title}
-                  Date={getRelativeDate(article.published_date)}
-                  readTime={article.read_time}
-                  BlogLink={article.article_link}
-                />
-              );
-            })}
+            {blogs.length === 0 ? (
+              <Loading size="xl" type="points" color={"secondary"} />
+            ) : (
+              blogs.map((article) => {
+                return (
+                  <BlogPostCard
+                    key={article._id}
+                    BlogImg={article.blog_img_url}
+                    BlogImgAlt={article.blog_img_alt}
+                    BlogTitle={article.blog_title}
+                    Date={getRelativeDate(article.published_date)}
+                    readTime={article.read_time}
+                    BlogLink={article.article_link}
+                  />
+                );
+              })
+            )}
           </div>
 
           {/* <div className="row-2">
