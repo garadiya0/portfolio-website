@@ -55,8 +55,7 @@ const about = () => {
               className={`${styles.LinkEle}`}
               href={"emailto:himanshup1308@gmail.com"}
             >
-              {" "}
-              himanshup1308@gmail.com
+              &nbsp; himanshup1308@gmail.com
               <Image
                 src="/icons/link_arrow.svg"
                 height={23}
