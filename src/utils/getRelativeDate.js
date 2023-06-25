@@ -4,4 +4,4 @@ const getRelativeDate = (date) => {
   return format(parseISO(date), "dd MMM, yyyy");
 };
 
-export default  getRelativeDate ;
+export default getRelativeDate;

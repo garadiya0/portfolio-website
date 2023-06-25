@@ -8,6 +8,7 @@ import { Loading } from "@nextui-org/react";
 import styles from "@/styles/Blog.module.css";
 import Footer from "@/components/Footer/Footer";
 import getRelativeDate from "@/utils/getRelativeDate";
+import getSummary from "@/utils/getSummary";
 
 const blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -46,7 +47,7 @@ const blog = () => {
                   BlogImg={article.blog_img_url}
                   BlogImgAlt={article.blog_img_alt}
                   BlogTitle={article.blog_title}
-                  BlogSubHeading={article.blog_summary}
+                  BlogSubHeading={getSummary(article.blog_summary)}
                   Date={getRelativeDate(article.published_date)}
                   ReadTime={article.read_time}
                 />
