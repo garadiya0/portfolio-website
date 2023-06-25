@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const fetchBlogs = async () => {
       await axios
-        .get("/api/getBlogs?limit=2")
+        .get("/api/getBlogs?limit=2", { timeout: 5000 })
         .then((res) => {
           setBlogs(res.data);
           console.log(res.data);
@@ -113,7 +113,7 @@ export default function Home() {
             {blogs.map((article) => {
               return (
                 <BlogPostCard
-                key={article._id}
+                  key={article._id}
                   BlogImg={article.blog_img_url}
                   BlogImgAlt={article.blog_img_alt}
                   BlogTitle={article.blog_title}

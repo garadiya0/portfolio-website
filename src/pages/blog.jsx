@@ -15,7 +15,7 @@ const blog = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       await axios
-        .get("/api/getBlogs")
+        .get("/api/getBlogs", { timeout: 5000 })
         .then((res) => {
           setBlogs(res.data);
           console.log(res.data);
