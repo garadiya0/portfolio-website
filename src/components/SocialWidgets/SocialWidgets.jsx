@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Tooltip } from "@mui/material";
-import Zoom from "@mui/material";
 import styles from "./SocialWidgets.module.css";
 
 const SocialWidgets = (props) => {
@@ -23,7 +22,6 @@ const SocialWidgets = (props) => {
           <Tooltip
             title="Twitter"
             placement="top"
-            TransitionComponent={Zoom}
             arrow
             PopperProps={{
               disablePortal: true,
@@ -53,7 +51,6 @@ const SocialWidgets = (props) => {
           <Tooltip
             title="Github"
             placement="top"
-            TransitionComponent={Zoom}
             arrow
             PopperProps={{
               disablePortal: true,
@@ -83,7 +80,6 @@ const SocialWidgets = (props) => {
           <Tooltip
             title="Instagram"
             placement="top"
-            TransitionComponent={Zoom}
             arrow
             PopperProps={{
               disablePortal: true,
@@ -113,7 +109,6 @@ const SocialWidgets = (props) => {
           <Tooltip
             title="Medium"
             placement="top"
-            TransitionComponent={Zoom}
             arrow
             PopperProps={{
               disablePortal: true,
