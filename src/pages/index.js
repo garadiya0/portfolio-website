@@ -21,8 +21,10 @@ export default function Home() {
         .get("/api/getBlogs?limit=2")
         .then((res) => {
           setBlogs(res.data);
+          console.log('blog ✅');
         })
         .catch((err) => {
+          console.log('blog ❌');
           console.log(err);
         });
     };
