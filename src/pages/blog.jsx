@@ -3,31 +3,15 @@ import Navigation from "@/components/NavigationBar/Navigation";
 import BlogPostCardDetail from "@/components/BlogPostCardDetail/BlogPostCardDetail";
 import Link from "next/link";
 import Image from "next/image";
-import axios from "axios";
 import { Loading } from "@nextui-org/react";
 import styles from "@/styles/Blog.module.css";
 import Footer from "@/components/Footer/Footer";
 import getRelativeDate from "@/utils/getRelativeDate";
 import getSummary from "@/utils/getSummary";
+import connectToDatabase from "@/lib/mongodb";
 
-const blog = () => {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      await axios
-        .get("/api/getBlogs")
-        .then((res) => {
-          setBlogs(res.data);
-          console.log(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-
-    fetchBlogs();
-  }, []);
+export default function blog(props) {
+  const [blogs, setBlogs] = useState(props.blogs);
 
   return (
     <>
@@ -76,6 +60,17 @@ const blog = () => {
       <Footer />
     </>
   );
-};
+}
 
-export default blog;
+export async function getServerSideProps(context) {
+  const client = await connectToDatabase();
+  const collection = client.db().collection("blogs");
+
+  const data = await collection.find({}).toArray();
+
+  const blogs = JSON.parse(JSON.stringify(data));
+
+  return {
+    props: { blogs: blogs },
+  };
+}

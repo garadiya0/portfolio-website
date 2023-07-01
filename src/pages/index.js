@@ -11,26 +11,10 @@ import SocialWidgets from "@/components/SocialWidgets/SocialWidgets";
 import Navigation from "@/components/NavigationBar/Navigation";
 import getRelativeDate from "@/utils/getRelativeDate";
 import { Loading } from "@nextui-org/react";
+import connectToDatabase from "@/lib/mongodb";
 
-export default function Home() {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      await axios
-        .get("/api/getBlogs?limit=2")
-        .then((res) => {
-          setBlogs(res.data);
-          console.log('blog ✅');
-        })
-        .catch((err) => {
-          console.log('blog ❌');
-          console.log(err);
-        });
-    };
-
-    fetchBlogs();
-  }, []);
+export default function Home(props) {
+  const [blogs, setBlogs] = useState(props.blogs);
 
   return (
     <>
@@ -112,7 +96,7 @@ export default function Home() {
           <h1>BLOG POSTS</h1>
 
           <div className={styles.row_1}>
-            {blogs.length === 0 ? (
+            {blogs.length === [] ? (
               <Loading size="xl" type="points" color={"secondary"} />
             ) : (
               blogs.map((article) => {
@@ -174,4 +158,21 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const client = await connectToDatabase();
+  const collection = client.db().collection("blogs");
+
+  const data = await collection
+    .find({})
+    .limit(2)
+    .sort({ published_date: -1 })
+    .toArray();
+
+  const blogs = JSON.parse(JSON.stringify(data));
+
+  return {
+    props: { blogs: blogs },
+  };
 }
