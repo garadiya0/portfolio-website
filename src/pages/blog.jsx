@@ -66,7 +66,7 @@ export async function getServerSideProps(context) {
   const client = await connectToDatabase();
   const collection = client.db().collection("blogs");
 
-  const data = await collection.find({}).toArray();
+  const data = await collection.find({}).sort({ published_date: -1 }).toArray();
 
   const blogs = JSON.parse(JSON.stringify(data));
 
