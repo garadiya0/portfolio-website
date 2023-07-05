@@ -47,10 +47,6 @@ export default function Home(props) {
   const [blogs, setBlogs] = useState(props.blogs);
   const [projects, setProjects] = useState(props.projects);
 
-  useEffect(() => {
-    console.log(projects);
-  }, []);
-
   return (
     <>
       <Navigation />
