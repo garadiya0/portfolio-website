@@ -8,10 +8,23 @@ import styles from "@/styles/Blog.module.css";
 import Footer from "@/components/Footer/Footer";
 import getRelativeDate from "@/utils/getRelativeDate";
 import getSummary from "@/utils/getSummary";
-import connectToDatabase from "@/lib/mongodb";
+import { database } from "@/lib/firebase";
+import { getDocs, collection } from "firebase/firestore/lite";
 
 export default function blog(props) {
-  const [blogs, setBlogs] = useState(props.blogs);
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const blogsCollection = collection(database, "blogs");
+      const blogsSnapshot = await getDocs(blogsCollection);
+
+      const blogsData = blogsSnapshot.docs.map((doc) => doc.data());
+      setBlogs(blogsData.reverse());
+    };
+
+    fetchBlogs();
+  }, []);
 
   return (
     <>
@@ -26,12 +39,12 @@ export default function blog(props) {
             blogs.map((article) => {
               return (
                 <BlogPostCardDetail
-                  key={article._id}
-                  BlogLink={article.article_link}
-                  BlogImg={article.blog_img_url}
-                  BlogImgAlt={article.blog_img_alt}
-                  BlogTitle={article.blog_title}
-                  BlogSubHeading={getSummary(article.blog_summary)}
+                  key={article.id}
+                  BlogLink={article.article_url}
+                  BlogImg={article.article_img_url}
+                  BlogImgAlt={article.article_img_alt}
+                  BlogTitle={article.article_title}
+                  BlogSubHeading={getSummary(article.article_summary)}
                   Date={getRelativeDate(article.published_date)}
                   ReadTime={article.read_time}
                 />
@@ -60,17 +73,4 @@ export default function blog(props) {
       <Footer />
     </>
   );
-}
-
-export async function getServerSideProps(context) {
-  const client = await connectToDatabase();
-  const collection = client.db().collection("blogs");
-
-  const data = await collection.find({}).sort({ published_date: -1 }).toArray();
-
-  const blogs = JSON.parse(JSON.stringify(data));
-
-  return {
-    props: { blogs: blogs },
-  };
 }

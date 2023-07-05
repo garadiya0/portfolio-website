@@ -11,10 +11,28 @@ import SocialWidgets from "@/components/SocialWidgets/SocialWidgets";
 import Navigation from "@/components/NavigationBar/Navigation";
 import getRelativeDate from "@/utils/getRelativeDate";
 import { Loading } from "@nextui-org/react";
-import connectToDatabase from "@/lib/mongodb";
+import { database } from "@/lib/firebase";
+import { getDocs, collection } from "firebase/firestore/lite";
 
 export default function Home(props) {
-  const [blogs, setBlogs] = useState(props.blogs);
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const blogsCollection = collection(database, "blogs");
+      const blogsSnapshot = await getDocs(blogsCollection);
+
+      const blogsData = blogsSnapshot.docs.map((doc) => doc.data());
+
+      blogsData.reverse();
+
+      blogsData.splice(2);
+
+      setBlogs(blogsData);
+    };
+
+    fetchBlogs();
+  }, []);
 
   return (
     <>
@@ -102,13 +120,13 @@ export default function Home(props) {
               blogs.map((article) => {
                 return (
                   <BlogPostCard
-                    key={article._id}
-                    BlogImg={article.blog_img_url}
-                    BlogImgAlt={article.blog_img_alt}
-                    BlogTitle={article.blog_title}
+                    key={article.id}
+                    BlogImg={article.article_img_url}
+                    BlogImgAlt={article.article_img_alt}
+                    BlogTitle={article.article_title}
                     Date={getRelativeDate(article.published_date)}
                     readTime={article.read_time}
-                    BlogLink={article.article_link}
+                    BlogLink={article.article_url}
                   />
                 );
               })
@@ -158,21 +176,4 @@ export default function Home(props) {
       </section>
     </>
   );
-}
-
-export async function getServerSideProps(context) {
-  const client = await connectToDatabase();
-  const collection = client.db().collection("blogs");
-
-  const data = await collection
-    .find({})
-    .limit(2)
-    .sort({ published_date: -1 })
-    .toArray();
-
-  const blogs = JSON.parse(JSON.stringify(data));
-
-  return {
-    props: { blogs: blogs },
-  };
 }
