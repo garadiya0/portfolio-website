@@ -15,6 +15,7 @@ import { database } from "@/lib/firebase";
 import { getDocs, collection } from "firebase/firestore/lite";
 
 export async function getStaticProps() {
+  // GETTING BLOGS FROM FIRESTORE
   const blogsCollection = collection(database, "blogs");
   const blogsSnapshot = await getDocs(blogsCollection);
 
@@ -24,15 +25,31 @@ export async function getStaticProps() {
 
   blogs.splice(2);
 
+  // GETTING PROJECTS FROM FIRESTORE
+  const project_cols = collection(database, "projects");
+  const project_snapshot = await getDocs(project_cols);
+
+  const projects = project_snapshot.docs.map((doc) => doc.data());
+
+  projects.reverse();
+
+  projects.splice(3);
+
   return {
     props: {
-      blogs,
+      blogs: blogs,
+      projects: projects,
     },
   };
 }
 
 export default function Home(props) {
   const [blogs, setBlogs] = useState(props.blogs);
+  const [projects, setProjects] = useState(props.projects);
+
+  useEffect(() => {
+    console.log(projects);
+  }, []);
 
   return (
     <>
@@ -62,38 +79,27 @@ export default function Home(props) {
         <section className={styles.Project_Section}>
           <h1>PROJECTS</h1>
 
-          <ProjectCard
-            ProjectLogo="https://raw.githubusercontent.com/garadiya0/linkfy/main/public/link.svg"
-            LogoAltText="linkfy logo"
-            ProjectName="Linkfy"
-            ProjectDesc="Linkfy allows you to create shortened URLs for clean sharing ✨"
-            LiveLink="https://linkfy.vercel.app/"
-            LiveLinkName="linkfy.vercel.app"
-            GithubRepoURL="https://github.com/garadiya0/linkfy"
-            GithubRepoName="garadiya0/linkfy"
-          />
-
-          <ProjectCard
-            ProjectLogo="https://raw.githubusercontent.com/garadiya0/protonn/main/assets/logo.webp"
-            LogoAltText="protonn logo"
-            ProjectName="Protonn"
-            ProjectDesc="A demo landing page for a SAAS company"
-            LiveLink="https://get-protonn.netlify.app/"
-            LiveLinkName="get-protonn.netlify.app"
-            GithubRepoURL="https://github.com/garadiya0/protonn"
-            GithubRepoName="garadiya0/protonn"
-          />
-
-          <ProjectCard
-            ProjectLogo="https://raw.githubusercontent.com/garadiya0/polyverse-illustration/main/assets/favicon.png"
-            LogoAltText="polyverse logo"
-            ProjectName="Polyverse Illustration"
-            ProjectDesc="Landing page showcasing 3D illustrations across various categories"
-            LiveLink="https://polyverse.netlify.app/"
-            LiveLinkName="polyverse.netlify.app"
-            GithubRepoURL="https://github.com/garadiya0/polyverse-illustration/"
-            GithubRepoName="garadiya0/polyverse-illustration"
-          />
+          <div className={styles.Container}>
+            {projects.length === 0 ? (
+              <Loading size="xl" type="points" color={"secondary"} />
+            ) : (
+              projects.map((project) => {
+                return (
+                  <ProjectCard
+                    key={project.id}
+                    ProjectLogo={project.project_logo}
+                    ProjectLogoAlt={project.project_img_alt}
+                    ProjectName={project.project_name}
+                    ProjectDesc={project.project_desc}
+                    ProjectLiveLink={project.live_url}
+                    ProjectLiveLinkName={project.live_url_name}
+                    ProjectGithubURL={project.repo_url}
+                    ProjectGithubRepo={project.repo_url_name}
+                  />
+                );
+              })
+            )}
+          </div>
 
           <Link href={"/projects"} className={styles.View_Project}>
             <h3>

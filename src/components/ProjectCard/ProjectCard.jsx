@@ -11,7 +11,7 @@ const ProjectCard = (props) => {
           src={props.ProjectLogo}
           width={70}
           height={70}
-          alt={props.LogoAltText}
+          alt={props.ProjectLogoAlt}
         />
 
         <span className={styles.Info}>
@@ -23,9 +23,9 @@ const ProjectCard = (props) => {
               <Link
                 className="Underline_Eff"
                 target="_blank"
-                href={props.LiveLink}
+                href={props.ProjectLiveLink}
               >
-                {props.LiveLinkName}
+                {props.ProjectLiveLinkName}
               </Link>
               <Image
                 src="/icons/link_arrow.svg"
@@ -44,9 +44,9 @@ const ProjectCard = (props) => {
               <Link
                 className="Underline_Eff"
                 target="_blank"
-                href={props.GithubRepoURL}
+                href={props.ProjectGithubURL}
               >
-                {props.GithubRepoName}
+                {props.ProjectGithubRepo}
               </Link>
               <Image
                 src="/icons/link_arrow.svg"
