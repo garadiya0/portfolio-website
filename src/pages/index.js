@@ -14,25 +14,25 @@ import { Loading } from "@nextui-org/react";
 import { database } from "@/lib/firebase";
 import { getDocs, collection } from "firebase/firestore/lite";
 
+export async function getStaticProps() {
+  const blogsCollection = collection(database, "blogs");
+  const blogsSnapshot = await getDocs(blogsCollection);
+
+  const blogs = blogsSnapshot.docs.map((doc) => doc.data());
+
+  blogs.reverse();
+
+  blogs.splice(2);
+
+  return {
+    props: {
+      blogs,
+    },
+  };
+}
+
 export default function Home(props) {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const blogsCollection = collection(database, "blogs");
-      const blogsSnapshot = await getDocs(blogsCollection);
-
-      const blogsData = blogsSnapshot.docs.map((doc) => doc.data());
-
-      blogsData.reverse();
-
-      blogsData.splice(2);
-
-      setBlogs(blogsData);
-    };
-
-    fetchBlogs();
-  }, []);
+  const [blogs, setBlogs] = useState(props.blogs);
 
   return (
     <>

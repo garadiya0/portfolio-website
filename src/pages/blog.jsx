@@ -29,17 +29,6 @@ export async function getStaticProps() {
 export default function blog(props) {
   const [blogs, setBlogs] = useState(props.blogs);
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const blogsCollection = collection(database, "blogs");
-      const blogsSnapshot = await getDocs(blogsCollection);
-
-      const blogsData = blogsSnapshot.docs.map((doc) => doc.data());
-      setBlogs(blogsData.reverse());
-    };
-
-  }, []);
-
   return (
     <>
       <Navigation currentPage="Blog" />
