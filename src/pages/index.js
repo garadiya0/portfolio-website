@@ -114,7 +114,7 @@ export default function Home(props) {
           <h1>BLOG POSTS</h1>
 
           <div className={styles.row_1}>
-            {blogs.length === [] ? (
+            {blogs.length === 0 ? (
               <Loading size="xl" type="points" color={"secondary"} />
             ) : (
               blogs.map((article) => {
