@@ -11,8 +11,23 @@ import getSummary from "@/utils/getSummary";
 import { database } from "@/lib/firebase";
 import { getDocs, collection } from "firebase/firestore/lite";
 
+export async function getStaticProps() {
+  const blogsCollection = collection(database, "blogs");
+  const blogsSnapshot = await getDocs(blogsCollection);
+
+  const blogs = blogsSnapshot.docs.map((doc) => doc.data());
+
+  blogs.reverse();
+
+  return {
+    props: {
+      blogs,
+    },
+  };
+}
+
 export default function blog(props) {
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState(props.blogs);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -23,7 +38,6 @@ export default function blog(props) {
       setBlogs(blogsData.reverse());
     };
 
-    fetchBlogs();
   }, []);
 
   return (
