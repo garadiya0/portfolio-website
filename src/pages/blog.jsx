@@ -10,6 +10,7 @@ import getRelativeDate from "@/utils/getRelativeDate";
 import getSummary from "@/utils/getSummary";
 import { database } from "@/lib/firebase";
 import { getDocs, collection } from "firebase/firestore/lite";
+import { Slide, Fade } from "react-reveal";
 
 export async function getStaticProps() {
   const blogsCollection = collection(database, "blogs");
@@ -41,16 +42,16 @@ export default function blog(props) {
           ) : (
             blogs.map((article) => {
               return (
-                <BlogPostCardDetail
-                  key={article.id}
-                  BlogLink={article.article_url}
-                  BlogImg={article.article_img_url}
-                  BlogImgAlt={article.article_img_alt}
-                  BlogTitle={article.article_title}
-                  BlogSubHeading={getSummary(article.article_summary)}
-                  Date={getRelativeDate(article.published_date)}
-                  ReadTime={article.read_time}
-                />
+                  <BlogPostCardDetail
+                    key={article.id}
+                    BlogLink={article.article_url}
+                    BlogImg={article.article_img_url}
+                    BlogImgAlt={article.article_img_alt}
+                    BlogTitle={article.article_title}
+                    BlogSubHeading={getSummary(article.article_summary)}
+                    Date={getRelativeDate(article.published_date)}
+                    ReadTime={article.read_time}
+                  />
               );
             })
           )}
