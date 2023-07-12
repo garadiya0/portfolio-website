@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import axios from "axios";
 import Footer from "@/components/Footer/Footer";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import BlogPostCard from "@/components/BlogPostCard/BlogPostCard";
@@ -13,6 +12,7 @@ import getRelativeDate from "@/utils/getRelativeDate";
 import { Loading } from "@nextui-org/react";
 import { database } from "@/lib/firebase";
 import { getDocs, collection } from "firebase/firestore/lite";
+import { Slide } from "react-reveal";
 
 export async function getStaticProps() {
   // GETTING BLOGS FROM FIRESTORE
@@ -81,17 +81,19 @@ export default function Home(props) {
             ) : (
               projects.map((project) => {
                 return (
-                  <ProjectCard
-                    key={project.id}
-                    ProjectLogo={project.project_logo}
-                    ProjectLogoAlt={project.project_img_alt}
-                    ProjectName={project.project_name}
-                    ProjectDesc={project.project_desc}
-                    ProjectLiveLink={project.live_url}
-                    ProjectLiveLinkName={project.live_url_name}
-                    ProjectGithubURL={project.repo_url}
-                    ProjectGithubRepo={project.repo_url_name}
-                  />
+                  <Slide bottom>
+                    <ProjectCard
+                      key={project.id}
+                      ProjectLogo={project.project_logo}
+                      ProjectLogoAlt={project.project_img_alt}
+                      ProjectName={project.project_name}
+                      ProjectDesc={project.project_desc}
+                      ProjectLiveLink={project.live_url}
+                      ProjectLiveLinkName={project.live_url_name}
+                      ProjectGithubURL={project.repo_url}
+                      ProjectGithubRepo={project.repo_url_name}
+                    />
+                  </Slide>
                 );
               })
             )}
@@ -121,15 +123,17 @@ export default function Home(props) {
             ) : (
               blogs.map((article) => {
                 return (
-                  <BlogPostCard
-                    key={article.id}
-                    BlogImg={article.article_img_url}
-                    BlogImgAlt={article.article_img_alt}
-                    BlogTitle={article.article_title}
-                    Date={getRelativeDate(article.published_date)}
-                    readTime={article.read_time}
-                    BlogLink={article.article_url}
-                  />
+                  <Slide bottom>
+                    <BlogPostCard
+                      key={article.id}
+                      BlogImg={article.article_img_url}
+                      BlogImgAlt={article.article_img_alt}
+                      BlogTitle={article.article_title}
+                      Date={getRelativeDate(article.published_date)}
+                      readTime={article.read_time}
+                      BlogLink={article.article_url}
+                    />
+                  </Slide>
                 );
               })
             )}
