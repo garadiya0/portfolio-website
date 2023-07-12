@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/Projects.module.css";
@@ -31,7 +31,7 @@ const projects = (props) => {
       <Navigation currentPage="Projects" />
       <section className={styles.Main}>
         <div className={styles.Container}>
-          <h1>PROJECTS 🛠</h1>
+          <h1>PROJECTS</h1>
 
           <div className={styles.Container}>
             {projects.length === 0 ? (
