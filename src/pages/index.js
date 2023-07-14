@@ -20,7 +20,7 @@ export async function getStaticProps() {
   const blogsSnapshot = await getDocs(blogsCollection);
 
   const blogs = blogsSnapshot.docs.map((doc) => doc.data());
-
+ 
   blogs.reverse();
 
   blogs.splice(2);
