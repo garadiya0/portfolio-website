@@ -28,7 +28,12 @@ export async function getStaticProps() {
 }
 
 export default function blog(props) {
-  const [blogs, setBlogs] = useState(props.blogs);
+  // .TEMP HIDE, MED_05 ARTICLE
+  const [blogs, setBlogs] = useState(
+    props.blogs.filter((element) => {
+      return element.id !== 5;
+    })
+  );
 
   return (
     <>
@@ -42,16 +47,16 @@ export default function blog(props) {
           ) : (
             blogs.map((article) => {
               return (
-                  <BlogPostCardDetail
-                    key={article.id}
-                    BlogLink={article.article_url}
-                    BlogImg={article.article_img_url}
-                    BlogImgAlt={article.article_img_alt}
-                    BlogTitle={article.article_title}
-                    BlogSubHeading={getSummary(article.article_summary)}
-                    Date={getRelativeDate(article.published_date)}
-                    ReadTime={article.read_time}
-                  />
+                <BlogPostCardDetail
+                  key={article.id}
+                  BlogLink={article.article_url}
+                  BlogImg={article.article_img_url}
+                  BlogImgAlt={article.article_img_alt}
+                  BlogTitle={article.article_title}
+                  BlogSubHeading={getSummary(article.article_summary)}
+                  Date={getRelativeDate(article.published_date)}
+                  ReadTime={article.read_time}
+                />
               );
             })
           )}
